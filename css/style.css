@@ -7,10 +7,14 @@
     font-family: 'Special Elite';
     src: url('../assets/fonts/SpecialElite-Regular.ttf') format('truetype');
 }
+@font-face {
+    font-family: 'Anta';
+    src: url('../assets/fonts/Anta-Regular.ttf') format('truetype');
+}
 
 :root {
     --primary-color: #00eaff;
-    --bg-color: #040404;
+    --bg-color: #000000;
     --terminal-bg: #000000;
     --text-color: #ffffff;
     --accent-color: #a9f8ff;
@@ -632,6 +636,17 @@ spline-viewer {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin: 0 auto; 
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .leftAbout {
+        margin-bottom: 50px;
+        margin: 0% 5% 5% 5%;
+    }
 }
 
 /* LEFT ABOUT */
@@ -643,17 +658,19 @@ spline-viewer {
     align-items: center; 
     text-align: justify;
 }
-.leftAbout h2{
+.leftAbout h2 {
     font-family: 'VT323', monospace;
     color: var(--primary-color);
-    font-size: 2.5rem;
+    font-size: 5rem;
     text-align: center;
+    overflow: hidden; /* Ensure the text doesn't overflow */
+    white-space: nowrap; /* Prevent text from wrapping */
 }
 
 /* CARD TERMINAL */
 .code-editor {
     align-content: center;
-    max-height: 380px;
+    max-height: 480px;
     max-width: auto;
     background-color: #1d1e22;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.5);
@@ -733,4 +750,123 @@ spline-viewer {
 
 .color-preview-1 {
     background-color: rgba(0, 0, 0, 0.5);
+}
+
+.contactUs {
+    margin-bottom: 5%;
+}
+.contactUs h2{
+    font-family: 'VT323', monospace;
+    color: var(--primary-color);
+    font-size: 5rem;
+    text-align: center;
+    overflow: hidden; /* Ensure the text doesn't overflow */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+/* CARDS CONTACT US */
+/* From Uiverse.io by kamehame-ha */ 
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-family: 'Anta', monospace;
+    font-size: 1.2em;
+}
+
+.cards .red {
+    background-color: #7ea9af;
+
+}
+
+.cards .red p{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.cards .blue {
+    background-color: #4ea3ae;
+}
+
+.cards .green {
+    background-color: #009db1;
+}
+
+.cards .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 100px;
+    width: 500px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: 400ms;
+}
+
+.cards .card p.tip {
+    font-size: 1em;
+    font-weight: 700;
+}
+
+.cards .card p.second-text {
+    font-size: .7em;
+}
+
+.cards .card:hover {
+    transform: scale(1.1, 1.1);
+}
+
+.cards:hover>.card:not(:hover) {
+    filter: blur(10px);
+    transform: scale(0.9, 0.9);
+}
+
+/* ICONS SOCIAL */
+.social-login-icons {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 5%; /* Ajusta según sea necesario */
+    left: 5%; /* Ajusta según sea necesario */
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+    gap: 30px;
+}
+.social-login-icons svg {
+    width: 40px;
+}
+
+.social-icon-1,
+.social-icon-4 {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.socialcontainer {
+    height: 50px;
+    overflow: hidden;
+}
+
+.social-icon-1 {
+    transition-duration: 0.4s;
+    background-color: rgb(0, 0, 0);
+}
+
+.socialcontainer:hover .social-icon-1 {
+    transform: translateY(-50px);
+}
+
+.social-icon-4 {
+    transition-duration: 0.4s;
+    background: linear-gradient(180deg,
+            rgba(129, 34, 144, 1) 0%,
+            rgba(77, 34, 124, 1) 91%);
+}
+
+.socialcontainer:hover .social-icon-4 {
+    transform: translateY(-50px);
 }
