@@ -22,7 +22,6 @@
         <ul class="menu-items">
             <li><a href="#home" class="menu-link">Home</a></li>
             <li><a href="#about" class="menu-link">About</a></li>
-            <li><a href="#chat" class="menu-link">Chat</a></li>
             <li><a href="#contact" class="menu-link">Contact</a></li>
         </ul>
     </nav>
@@ -98,18 +97,98 @@
         </div>
         <hr>
         <section id="about" class="section">
-            <h2>About the Agent</h2>
-            <p>A noir-themed AI assistant, ready to engage in meaningful conversation.</p>
+            <div class="container">
+                <div class="leftAbout">
+                    <h2>About the Agent</h2>
+                    <br>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus beatae iusto esse blanditiis non voluptate neque laudantium suscipit, molestiae quo tempora eos in voluptatem modi nostrum deleniti voluptatibus quisquam ipsa!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, quis! Possimus sint doloremque rem, ea fuga necessitatibus, quibusdam est repudiandae porro aperiam dolores, vel dolore amet vero nostrum distinctio doloribus?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio possimus aperiam quia. Distinctio quos eveniet quam perspiciatis vel odit sed, cupiditate earum temporibus saepe consequuntur libero odio reprehenderit. Temporibus, similique.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio mollitia officia illo esse quae quasi, necessitatibus suscipit optio quibusdam tempore ipsam asperiores nisi soluta cumque a explicabo eveniet? Adipisci, sit!
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, sunt veniam. Fuga adipisci ipsa neque officia dicta minus eveniet soluta quod error reiciendis. Laudantium adipisci officiis numquam beatae accusantium quas.    
+                    </p>
+                    <br>
+                    <button id="open-chat" class="chat-button">Start Conversation</button>
+                </div>
+                
+                <!-- Tarjeta adaptada -->
+                <div class="code-editor">
+                    <div class="header">
+                        <span class="title">AI AGENT</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="icon">
+                            <g stroke-width="0" id="SVGRepo_bgCarrier"></g>
+                            <g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path stroke-linecap="round" stroke-width="2" stroke="#4C4F5A" d="M6 6L18 18"></path>
+                                <path stroke-linecap="round" stroke-width="2" stroke="#4C4F5A" d="M18 6L6 18"></path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="editor-content">
+                        <code class="code">
+                            <p><span class="color-0">const patterns = [</span> <span>{</span></p>
+                            <p class="property">
+                            <span class="color-2">pattern</span><span>:</span>
+                            <span class="color-1">/^(hello|hi|hey|greetings)/i,</span>
+                            </p>
+                            <p class="property">
+                            <span class="color-2">responses</span><span>:</span><span>[</span>
+                            </p>
+                            <p class="property2">
+                            <span class="color-1">  "The streets of the mind can be dark. Tell me more about feeling {0}.",
+                            </span>
+                            </p>
+                            <p class="property2">
+                            <span class="color-1">  "In this digital age, feeling {0} is more common than you'd think.",
+                            </span>
+                            </p><p class="property2">
+                            <span class="color-1"> "Interesting. What led you to feel {0}?"
+                            </span>
+                            </p>
+                            <p class="property">
+                            <span>]</span>
+            
+                            <!-- codigo2 -->
+                            <p class="property">
+                            <span class="color-2">pattern</span><span>:</span>
+                            <span class="color-1">/(.*)/i,</span>
+                            </p>
+                            <p class="property">
+                            <span class="color-2">responses</span><span>:</span><span>[</span>
+                            </p>
+                            <p class="property2">
+                            <span class="color-1">"Interesting angle. Care to elaborate?",
+                            </span>
+                            </p>
+                            <p class="property2">
+                            <span class="color-1">"The plot thickens. Tell me more.",
+                            </span>
+                            </p><p class="property2">
+                            <span class="color-1">"In all my years in this business, that's a new one.",
+                            </span>
+                            </p><p class="property2">
+                            <span class="color-1">"Keep talking. I'm all circuits."
+                            </span>
+                            </p>
+                            <p class="property">
+                            <span>]</span>
+                            </p>
+                            <p><span>}</span><span class="color-0">];</span> </p>
+                        </code>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="chat" class="section">
+        <div id="chat-modal" class="chat-modal">
             <div id="chat-container">
                 <div class="terminal-header">
                     <span class="terminal-title">NOIR·TERMINAL</span>
                     <div class="terminal-controls">
                         <span class="control"></span>
                         <span class="control"></span>
-                        <span class="control"></span>
+                        <span class="control close-chat"></span>
                     </div>
                 </div>
                 <div id="chat-messages"></div>
@@ -118,7 +197,7 @@
                     <button onclick="sendMessage()">Send</button>
                 </div>
             </div>
-        </section>
+        </div>
 
         <section id="contact" class="section">
             <h2>Contact</h2>

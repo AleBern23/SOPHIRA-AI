@@ -49,3 +49,25 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const openChatButton = document.getElementById('open-chat');
+    const chatModal = document.getElementById('chat-modal');
+    const closeChat = document.querySelector('.close-chat');
+
+    openChatButton.addEventListener('click', function() {
+        chatModal.classList.add('active');
+    });
+
+    closeChat.addEventListener('click', function() {
+        chatModal.classList.remove('active');
+    });
+
+    // Close modal when clicking outside the chat container
+    chatModal.addEventListener('click', function(e) {
+        if (e.target === chatModal) {
+            chatModal.classList.remove('active');
+        }
+    });
+});
+
