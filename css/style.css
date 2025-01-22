@@ -828,11 +828,12 @@ spline-viewer {
     display: flex;
     align-items: center;
     position: fixed;
-    bottom: 5%; /* Ajusta según sea necesario */
-    left: 5%; /* Ajusta según sea necesario */
-    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+    bottom: 5%;
+    left: 5%;
+    z-index: 1000;
     gap: 30px;
 }
+
 .social-login-icons svg {
     width: 40px;
 }
@@ -869,4 +870,16 @@ spline-viewer {
 
 .socialcontainer:hover .social-icon-4 {
     transform: translateY(-50px);
+}
+
+/* Estilos actualizados para los enlaces */
+.socialcontainer a {
+    text-decoration: none;
+    display: block;
+    cursor: pointer; /* Añadido para cambiar el cursor */
+}
+
+.social-icon-1,
+.social-icon-4 {
+    cursor: pointer; /* Añadido para asegurar que el cursor cambie también sobre los íconos */
 }
